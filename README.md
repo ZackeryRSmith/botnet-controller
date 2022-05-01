@@ -1,7 +1,7 @@
 # botnet-controller
 A controller and managment software for botnets
 
-# Bried Working
+# Brief Working
 This program is used to control a botnet. It uses php to host servers locally and uses ngrok to port forward. 
 It then grabs the ngrok url and adds it in the botnet malware, which takes orders from the main server(where the controller is running)
 The bots then requst the url and do the task specidied to them
