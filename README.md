@@ -17,8 +17,7 @@ Features here
 
 ## Getting started?
 
-- Download the bot from **https://github.com/Souhardya/UBoat/releases**
-- Follow the wiki at **https://github.com/Souhardya/UBoat/wiki**
+- Download the software from **link to software here**
 
 ## How?
 
