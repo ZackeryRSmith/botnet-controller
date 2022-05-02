@@ -18,11 +18,17 @@ Port forwarding is not required and hence server deployment time is quicker and 
 ## Getting started?
 
 - Download the compiled software for windows from [here](https://raw.githubusercontent.com/canosaur/botnet-controller/main/controller.exe) or run 
- ```curl -o controller.exe https://raw.githubusercontent.com/canosaur/botnet-controller/main/controller.exe``` in your terminal.
+ ```
+ curl -o controller.exe https://raw.githubusercontent.com/canosaur/botnet-controller/main/controller.exe
+ ``` 
+ in your terminal.
  To run the exe simply click on it or run it from terminal by typing its name.
 
 - If you have python3 installed on your windows machine then you can download the python script from [here](http://raw.githubusercontent.com/canosaur/botnet-controller/main/controller.py) or run
-```curl -o controller.py http://raw.githubusercontent.com/canosaur/botnet-controller/main/controller.py``` in your terminal
+```
+curl -o controller.py http://raw.githubusercontent.com/canosaur/botnet-controller/main/controller.py
+```
+in your terminal
 - Run the program, if this is the first time running it, it will download some packages.
 - If you are an advance user and already have php, ngrok installed you can edit the source code accordingly and use it, but by default the program will
  itself download all the dependencies.
