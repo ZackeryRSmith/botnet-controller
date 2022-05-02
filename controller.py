@@ -4,7 +4,6 @@ from os import system
 from os.path import exists
 from sys import exit
 from os import chdir
-from os import curdir
 
 
 
