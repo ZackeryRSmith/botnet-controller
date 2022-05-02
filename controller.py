@@ -7,7 +7,7 @@ from os import chdir
 
 
 
-def check():
+def sys_check():
     if exists('files'):main()
     else:setup()
 
@@ -233,4 +233,4 @@ def DDoS():#completed
 
 
 
-check()
+sys_check()
