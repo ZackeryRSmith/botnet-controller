@@ -17,12 +17,12 @@ Port forwarding is not required and hence server deployment time is quicker and 
 
 ## Getting started?
 
-- Download the software from here "https://raw.githubusercontent.com/canosaur/botnet-controller/main/controller.exe" or run
+- Download the software from .[here](https://raw.githubusercontent.com/canosaur/botnet-controller/main/controller.exe) or run
 - ``` curl -o controller.exe https://raw.githubusercontent.com/canosaur/botnet-controller/main/controller.exe  ```
 - Run `controller.exe`, if this is the first time running it, it will download some packages.
 - If you are an advance user and already have php, ngrok installed you can edit the source code accordingly and use it, but by default the program will
 - itself download all the dependencies.
-- You will need an ngrok account(free account will work too) to run the program, it can be done here https://dashboard.ngrok.com/signup
+- You will need an ngrok account(free account will work too) to run the program, it can be done .[here](https://dashboard.ngrok.com/signup)
 
 ## How?
 
